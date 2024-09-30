@@ -1,1 +1,1 @@
-# tik-talk_Angular
+# пет проект по изучению Angular
