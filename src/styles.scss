@@ -5,6 +5,7 @@
   --dark-color: #000000;
   --light-color: #ffffff;
   --primary-color: #ae7aff;
+  --dark-hover-color: #161616;
 }
 
 *,
@@ -103,4 +104,5 @@ body {
   line-height: 21px;
   margin-top: 8px;
   color: var(--light-color);
+  font-family: "JetBrains Mono", sans-serif;
 }

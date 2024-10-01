@@ -7,9 +7,42 @@
   margin: 0 5%;
 }
 
-form,
-img {
+.login__form,
+.login__big-logo {
   width: 60%;
   display: block;
   margin: 0 auto;
+}
+
+.password-input,
+.login-input {
+  position: relative;
+}
+
+.password-eye-btn,
+.login-telegram-btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: 1;
+  right: 12px;
+  background: none;
+  border: none;
+}
+
+.password-eye-btn {
+  cursor: pointer;
+}
+
+.password-eye-btn__svg,
+.login-telegram-btn__svg {
+  color: var(--light-color);
+  opacity: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.password-eye-btn__svg.active {
+  color: var(--primary-color);
+  opacity: 100%;
 }

@@ -1,23 +1,40 @@
-<form class="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+<form class="login__form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <h1 class="h1 mb60">Вход</h1>
   <label class="tt-control-label mb16">
     telegram username
-    <input
-      formControlName="username"
-      class="tt-input"
-      type="text"
-      placeholder="Введите логин"
-    />
+    <div class="login-input">
+      <input
+        formControlName="username"
+        class="tt-input"
+        type="text"
+        placeholder="Введите логин"
+      />
+      <button class="login-telegram-btn">
+        <svg class="login-telegram-btn__svg" icon="telegram"></svg>
+      </button>
+    </div>
   </label>
   <label class="tt-control-label mb32">
     Пароль
-    <input
-      formControlName="password"
-      class="tt-input"
-      type="text"
-      placeholder="Введите пароль"
-    />
+    <div class="password-input">
+      <input
+        formControlName="password"
+        class="tt-input"
+        [type]="isPasswordVisible() ? 'text' : 'password'"
+        placeholder="Введите пароль"
+      />
+      <button
+        class="password-eye-btn"
+        (click)="isPasswordVisible.set(!isPasswordVisible())"
+      >
+        <svg
+          class="password-eye-btn__svg"
+          [class.active]="isPasswordVisible()"
+          icon="eye"
+        ></svg>
+      </button>
+    </div>
   </label>
   <button class="btn btn-shadow" type="submit">Войти</button>
 </form>
-<img src="/assets/svg/logo-big.svg" alt="logo" />
+<img src="/assets/svg/logo-big.svg" alt="logo" class="login__big-logo" />
